@@ -11,32 +11,49 @@
 </head>
 <body>
     <header>
-        <div class="container mt-2">
-            <h1>Calcolo prezzo biglietto treno</h1>
-            <p>Il prezzo totale del biglietto sarà calcolato secondo queste regole:</p>
-            <ul>
-                <li>il prezzo del biglietto è definito in base ai km (0.26 € al km)</li>
-                <li>Sconto del 15% per i minorenni</li>
-                <li>Sconto del 35% per gli over 65</li>
-            </ul>
+        <h1 class="text-center ms_color-white p-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="container mt-2 ms_bg-white ms_rounded">
+            <div class="row row-cols-xs-1 row-cols-md-2 justify-content-center p-3">
+                <div class="col-auto">
+                    <p>Il prezzo totale del biglietto sarà calcolato secondo queste regole:</p>
+                    <ul>
+                        <li>il prezzo del biglietto è definito in base ai km (0.26 € al km)</li>
+                        <li>Sconto del 15% per i minorenni</li>
+                        <li>Sconto del 35% per gli over 65</li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <div class="mb-2">
+                        <label for="input-userKm" class="form-label ms_style-label">Km da percorrere:</label>
+                        <input type="text" class="form-control w-75" id="input-userKm">
+                    </div>
+                    <div class="mb-3">
+                        <label for="input-userAge" class="form-labe ms_style-label mb-2">Età utente:</label>
+                        <input type="text" class="form-control w-75" id="input-userAge">
+                    </div>
+                    <button class="btn btn-primary mb-4" id="input-submit">Invia</button>
+                </div>
+            </div>
     </header>
 
     <main>
-        <div class="container">
-            <div class="mb-2">
-                <label for="input-userKm" class="form-label">Km da percorrere:</label>
-                <input type="text" class="form-control w-25" id="input-userKm">
+        <h1 class="text-center ms_color-white p-3">IL TUO BIGLIETTO</h1>
+        <div class="container ms_bg-white ms_rounded mt-3 p-3 px-5">
+            <h3>Dettaglio Passeggero</h3>
+            <hr>
+            <div class="row justify-content-between">
+                <div class="col-3">
+                    <img class="ms_qr-code" src="https://i.ibb.co/KFLjqyg/qr-code-train.png" alt="qr-code">
+                </div>
+                <div class="col-3">
+                    <div class="fw-bold fs-2">I tuoi dati:</div>
+                    <div id="userKm"></div>
+                    <div id="userAge"></div>
+                </div>
+                <div class="col-3">
+                    <div class="fw-bold fs-2">Prezzo finale: <span id="userTicket"></span></div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="input-userAge" class="form-label">Età utente:</label>
-                <input type="text" class="form-control w-25" id="input-userAge">
-            </div>
-            <button class="btn btn-primary mb-4" id="input-submit">Invia</button>
-
-            <div class="fw-bold">I tuoi dati:</div>
-            <div id="userKm"></div>
-            <div id="userAge"></div>
-            <div class="fw-bold">Prezzo finale: <span id="userTicket"></span></div>
         </div>
     </main>
 

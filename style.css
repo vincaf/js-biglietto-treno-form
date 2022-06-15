@@ -1,0 +1,28 @@
+body{
+    background-color: #b91450;
+}
+
+.container{
+    max-width: 1024px;
+}
+
+.ms_bg-white{
+    background-color: #fff;
+}
+
+.ms_color-white{
+    color: #fff;
+}
+
+.ms_rounded{
+    border-radius: 20px;
+}
+
+.ms_style-label{
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+.ms_qr-code{
+    width: 100px;
+}
