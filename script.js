@@ -22,5 +22,10 @@ buttonSubmit.addEventListener('click', function(){
 
     // Arrotondamento prezzo a due cifre decimali
     userTicket = userTicket.toFixed(2);
-    console.log(`Prezzo arrotondato ${userTicket}€`);
+    console.log(`Prezzo biglietto arrotondato ${userTicket}€`);
+
+    // Scrittura variabili sulla pagina
+    document.getElementById('userKm').innerHTML = userKm + ' Km da percorrere';
+    document.getElementById('userAge').innerHTML = userAge + ' anni';
+    document.getElementById('userTicket').innerHTML = userTicket + '€';
 });
