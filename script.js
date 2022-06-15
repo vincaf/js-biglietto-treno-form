@@ -7,7 +7,11 @@ buttonSubmit.addEventListener('click', function(){
 });
 
 // Conversione dei dati in numeri interi
-const userKm = parseInt(document.querySelector("#input-userKm"));
-const userAge = parseInt(document.querySelector("#input-userAge"));
+const userKm = parseInt('input-userKm');
+const userAge = parseInt('input-userAge');
 console.log(userKm);
 console.log(userAge);
+
+// Calcolo del costo del biglietto
+let userTicket = (userKm * 0.26);
+console.log(userTicket);
