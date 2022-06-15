@@ -2,16 +2,12 @@
 const buttonSubmit = document.querySelector("#input-submit");
 
 buttonSubmit.addEventListener('click', function(){
-    console.log(document.getElementById('input-userKm').value);
-    console.log(document.getElementById('input-userAge').value);
+    const userKm = parseInt(document.getElementById('input-userKm').value);
+    const userAge = parseInt(document.getElementById('input-userAge').value);
+    console.log(userKm);
+    console.log(userAge);
+
+    // Calcolo del costo del biglietto
+    let userTicket = (userKm * 0.26);
+    console.log(userTicket);
 });
-
-// Conversione dei dati in numeri interi
-const userKm = parseInt('input-userKm');
-const userAge = parseInt('input-userAge');
-console.log(userKm);
-console.log(userAge);
-
-// Calcolo del costo del biglietto
-let userTicket = (userKm * 0.26);
-console.log(userTicket);
