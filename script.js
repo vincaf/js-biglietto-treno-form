@@ -9,5 +9,18 @@ buttonSubmit.addEventListener('click', function(){
 
     // Calcolo del costo del biglietto
     let userTicket = (userKm * 0.26);
-    console.log(userTicket);
+    console.log(`Prezzo biglietto ${userTicket}`);
+
+    // Condizione sull'età per ricevere lo sconto
+    if (userAge < 18) {
+        userTicket = (userTicket - userTicket * 15 / 100);
+        console.log(`Prezzo biglietto con sconto 15% per minorenni ${userTicket}`);
+    } else if (userAge >= 65) {
+        userTicket = (userTicket - userTicket * 35 / 100 );
+        console.log(`Prezzo biglietto con sconto 35% per over65 ${userTicket}`);
+    }
+
+    // Arrotondamento prezzo a due cifre decimali
+    userTicket = userTicket.toFixed(2);
+    console.log(`Prezzo arrotondato ${userTicket}€`);
 });
